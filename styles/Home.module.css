@@ -34,10 +34,11 @@
 }
 
 .navlinks {
-  width: 20rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding-right: 1rem;
+  cursor: pointer;
 }
 
 .apptitle {

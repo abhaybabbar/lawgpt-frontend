@@ -4,10 +4,14 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import CircularProgress from "@mui/material/CircularProgress";
+import Header from "./components/header";
+import { getCookie } from "cookies-next";
+import { backend_url } from "./api/_healper";
 
 export default function Home() {
   const [userInput, setUserInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const token = getCookie("token");
   const [messages, setMessages] = useState([
     { role: "assistant", content: "Hi there! How can I help?" },
   ]);
@@ -50,18 +54,25 @@ export default function Home() {
     setLoading(true);
     const context = [...messages, { role: "user", content: userInput }];
     setMessages(context);
+    let headersList = {
+      Accept: "*/*",
+      Authorization: `Token ${token}`,
+      "Content-Type": "application/json",
+    };
 
     // Send chat history to API
-    const response = await fetch("/api/chat", {
+    const response = await fetch(`${backend_url}/chat/`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ messages: context }),
+      headers: headersList,
+      body: JSON.stringify({ question: userInput }),
     });
-
     // Reset user input
     setUserInput("");
+
+    if (!response.ok) {
+      handleError();
+      return;
+    }
 
     const data = await response.json();
 
@@ -72,7 +83,7 @@ export default function Home() {
 
     setMessages((prevMessages) => [
       ...prevMessages,
-      { role: "assistant", content: data.result.content },
+      { role: "assistant", content: data.data },
     ]);
     setLoading(false);
   };
@@ -91,27 +102,13 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>GPT-4 Chat UI</title>
-        <meta name="description" content="GPT-4 interface" />
+        <title>Legal Assistant</title>
+        <meta name="description" content="Legal Assistant" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.topnav}>
-        <div className={styles.navlogo}>
-          <a href="/">GPT-4 Chat UI</a>
-        </div>
-        <div className={styles.navlinks}>
-          <a
-            href="https://platform.openai.com/docs/models/gpt-4"
-            target="_blank"
-          >
-            Docs
-          </a>
-          <a href="https://replit.com/@zahid/GPT-4-UI" target="_blank">
-            Replit
-          </a>
-        </div>
-      </div>
+      <Header />
+
       <main className={styles.main}>
         <div className={styles.cloud}>
           <div ref={messageListRef} className={styles.messagelist}>
@@ -203,19 +200,7 @@ export default function Home() {
               </button>
             </form>
           </div>
-          <div className={styles.footer}>
-            <p>
-              Powered by{" "}
-              <a href="https://openai.com/" target="_blank">
-                OpenAI
-              </a>
-              . Built on{" "}
-              <a href="https://replit.com/@zahid/GPT-4-UI" target="_blank">
-                Replit
-              </a>
-              .
-            </p>
-          </div>
+          <div className={styles.footer}>Made with love in India</div>
         </div>
       </main>
     </>
