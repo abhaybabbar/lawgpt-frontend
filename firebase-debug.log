@@ -1,0 +1,874 @@
+[debug] [2023-04-04T14:31:26.033Z] ----------------------------------------------------------------------
+[debug] [2023-04-04T14:31:26.037Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-04-04T14:31:26.038Z] CLI Version:   11.25.2
+[debug] [2023-04-04T14:31:26.038Z] Platform:      win32
+[debug] [2023-04-04T14:31:26.038Z] Node Version:  v16.16.0
+[debug] [2023-04-04T14:31:26.040Z] Time:          Tue Apr 04 2023 20:01:26 GMT+0530 (India Standard Time)
+[debug] [2023-04-04T14:31:26.041Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-04T14:31:26.197Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-04T14:31:26.198Z] > authorizing via signed-in user (babbarabhay1852@gmail.com)
+[debug] [2023-04-04T14:31:26.199Z] [iam] checking project lawgp-bb050 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-04T14:31:26.203Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions [none]
+[debug] [2023-04-04T14:31:26.204Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:31:26.205Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-04T14:31:27.774Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions 200
+[debug] [2023-04-04T14:31:27.775Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-04T14:31:27.777Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 [none]
+[debug] [2023-04-04T14:31:28.320Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 200
+[debug] [2023-04-04T14:31:28.321Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 {"projectId":"lawgp-bb050","projectNumber":"675006246127","displayName":"lawgpt","name":"projects/lawgp-bb050","resources":{"hostingSite":"lawgp-bb050"},"state":"ACTIVE","etag":"1_3ed73d65-7904-4445-840c-24f138863d3a"}
+[info] 
+[info] === Deploying to 'lawgp-bb050'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2023-04-04T14:32:55.052Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 [none]
+[debug] [2023-04-04T14:32:55.703Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 200
+[debug] [2023-04-04T14:32:55.703Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 {"projectId":"lawgp-bb050","projectNumber":"675006246127","displayName":"lawgpt","name":"projects/lawgp-bb050","resources":{"hostingSite":"lawgp-bb050"},"state":"ACTIVE","etag":"1_3ed73d65-7904-4445-840c-24f138863d3a"}
+[info] i  functions: preparing codebase firebase-frameworks-lawgp-bb050 for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-04-04T14:32:55.710Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-04-04T14:32:55.710Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:32:55.712Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-04-04T14:32:55.713Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:32:55.718Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com [none]
+[debug] [2023-04-04T14:32:55.719Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:32:55.722Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com [none]
+[debug] [2023-04-04T14:32:55.722Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:32:57.644Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com 200
+[debug] [2023-04-04T14:32:57.644Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com [omitted]
+[warn] !  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2023-04-04T14:32:57.647Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2023-04-04T14:32:57.647Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com:enable x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:32:57.652Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudfunctions.googleapis.com 200
+[debug] [2023-04-04T14:32:57.652Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-04-04T14:32:57.667Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com 200
+[debug] [2023-04-04T14:32:57.668Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com [omitted]
+[warn] !  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now... 
+[debug] [2023-04-04T14:32:57.670Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com:enable [none]
+[debug] [2023-04-04T14:32:57.670Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com:enable x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:32:57.685Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/runtimeconfig.googleapis.com 200
+[debug] [2023-04-04T14:32:57.686Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-04-04T14:32:59.769Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com:enable 200
+[debug] [2023-04-04T14:32:59.769Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2023-04-04T14:32:59.842Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com:enable 200
+[debug] [2023-04-04T14:32:59.843Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com:enable [omitted]
+[debug] [2023-04-04T14:33:09.783Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com [none]
+[debug] [2023-04-04T14:33:09.783Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:33:09.847Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com [none]
+[debug] [2023-04-04T14:33:09.847Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:33:11.652Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com 200
+[debug] [2023-04-04T14:33:11.652Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-04-04T14:33:11.661Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com 200
+[debug] [2023-04-04T14:33:11.662Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-04-04T14:33:11.667Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050/adminSdkConfig [none]
+[debug] [2023-04-04T14:33:12.105Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050/adminSdkConfig 200
+[debug] [2023-04-04T14:33:12.105Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050/adminSdkConfig {"projectId":"lawgp-bb050","storageBucket":"lawgp-bb050.appspot.com"}
+[debug] [2023-04-04T14:33:12.106Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/lawgp-bb050/configs [none]
+[debug] [2023-04-04T14:33:12.630Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/lawgp-bb050/configs 200
+[debug] [2023-04-04T14:33:12.632Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/lawgp-bb050/configs {}
+[debug] [2023-04-04T14:33:12.637Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-04-04T14:33:16.632Z] > [functions] package.json contents: {
+  "name": "lawgpt",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "export": "next export",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.4",
+    "@next/font": "13.1.1",
+    "cookies-next": "^2.1.1",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "next": "^13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "react-markdown": "^8.0.6",
+    "firebase-frameworks": "^0.6.0",
+    "firebase-functions": "^3.23.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "16"
+  }
+}
+[debug] [2023-04-04T14:33:16.633Z] Building nodejs source
+[debug] [2023-04-04T14:33:16.636Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-04T14:33:16.676Z] Found firebase-functions binary at 'C:\Users\91951\Desktop\web development\quensulting\lawgpt\lawgpt\.firebase\lawgp-bb050\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-04-04T14:33:17.613Z] Serving at port 8001
+
+[debug] [2023-04-04T14:33:17.798Z] Got response from /__/functions.yaml {"endpoints":{"ssrlawgpbb050":{"platform":"gcfv2","region":["asia-east1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrlawgpbb050"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-04T14:33:17.825Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing .firebase\lawgp-bb050\functions directory for uploading... 
+[info] i  functions: packaged C:\Users\91951\Desktop\web development\quensulting\lawgpt\lawgpt\.firebase\lawgp-bb050\functions (54.3 MB) for uploading 
+[debug] [2023-04-04T14:33:24.996Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/lawgp-bb050/locations/-/functions [none]
+[debug] [2023-04-04T14:33:25.699Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/lawgp-bb050/locations/-/functions 200
+[debug] [2023-04-04T14:33:25.700Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/lawgp-bb050/locations/-/functions {}
+[debug] [2023-04-04T14:33:25.702Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-04-04T14:33:27.439Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/-/functions 200
+[debug] [2023-04-04T14:33:27.439Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-04-04T14:33:27.463Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com [none]
+[debug] [2023-04-04T14:33:27.464Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:33:27.466Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com [none]
+[debug] [2023-04-04T14:33:27.466Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:33:27.469Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/pubsub.googleapis.com [none]
+[debug] [2023-04-04T14:33:27.469Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/pubsub.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:33:27.471Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/storage.googleapis.com [none]
+[debug] [2023-04-04T14:33:27.472Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/storage.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:33:29.297Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/pubsub.googleapis.com 200
+[debug] [2023-04-04T14:33:29.297Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-04-04T14:33:29.306Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com 200
+[debug] [2023-04-04T14:33:29.306Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com [omitted]
+[warn] !  functions: missing required API eventarc.googleapis.com. Enabling now... 
+[debug] [2023-04-04T14:33:29.309Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com:enable [none]
+[debug] [2023-04-04T14:33:29.310Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com:enable x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:33:29.315Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/storage.googleapis.com 200
+[debug] [2023-04-04T14:33:29.316Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2023-04-04T14:33:29.318Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com 200
+[debug] [2023-04-04T14:33:29.319Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com [omitted]
+[warn] !  functions: missing required API run.googleapis.com. Enabling now... 
+[debug] [2023-04-04T14:33:29.320Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com:enable [none]
+[debug] [2023-04-04T14:33:29.321Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com:enable x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:33:31.409Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com:enable 200
+[debug] [2023-04-04T14:33:31.409Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com:enable [omitted]
+[debug] [2023-04-04T14:33:31.588Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com:enable 200
+[debug] [2023-04-04T14:33:31.588Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com:enable [omitted]
+[debug] [2023-04-04T14:33:41.414Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com [none]
+[debug] [2023-04-04T14:33:41.415Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:33:41.594Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com [none]
+[debug] [2023-04-04T14:33:41.594Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:33:42.188Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com 200
+[debug] [2023-04-04T14:33:42.189Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2023-04-04T14:33:43.396Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com 200
+[debug] [2023-04-04T14:33:43.396Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-04-04T14:33:43.405Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-04-04T14:33:43.409Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-04-04T14:33:45.468Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-04-04T14:33:45.469Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-675006246127@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"116380254167249144132"}}
+[debug] [2023-04-04T14:33:45.595Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-04-04T14:33:45.595Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-675006246127@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"107110362634833857806"}}
+[debug] [2023-04-04T14:33:45.600Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 [none]
+[debug] [2023-04-04T14:33:46.021Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 200
+[debug] [2023-04-04T14:33:46.021Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 {"projectId":"lawgp-bb050","projectNumber":"675006246127","displayName":"lawgpt","name":"projects/lawgp-bb050","resources":{"hostingSite":"lawgp-bb050"},"state":"ACTIVE","etag":"1_3ed73d65-7904-4445-840c-24f138863d3a"}
+[debug] [2023-04-04T14:33:46.026Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/lawgp-bb050/versions [none]
+[debug] [2023-04-04T14:33:46.026Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/lawgp-bb050/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-04-04T14:33:47.809Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/lawgp-bb050/versions 200
+[debug] [2023-04-04T14:33:47.810Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/lawgp-bb050/versions {"name":"projects/675006246127/sites/lawgp-bb050/versions/60698683fb236809","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-04-04T14:33:47.811Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-04-04T14:33:47.813Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions [none]
+[debug] [2023-04-04T14:33:47.813Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:33:47.813Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-04-04T14:33:48.161Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions 200
+[debug] [2023-04-04T14:33:48.161Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-04-04T14:33:48.161Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-04-04T14:33:48.163Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions:generateUploadUrl [none]
+[debug] [2023-04-04T14:33:51.099Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions:generateUploadUrl 200
+[debug] [2023-04-04T14:33:51.099Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/49c03d90-fc2a-4325-a876-80f56ad04843.zip?GoogleAccessId=service-675006246127@gcf-admin-robot.iam.gserviceaccount.com&Expires=1680620631&Signature=pggmwZJo3ooCPh8aYv%2F%2B7h%2BKkDQ%2FaeEafhqGIR5e3%2BeDDMcu%2F7V13zdpzWIrbsWywqbMcXd9poPw34HsmbfalwhBgmMARa6j%2F7JUYPdycJaBKf8p%2BkPvLsXk3QenNwnMUItS0yjxU3%2BBS8%2BtHgykkb4X3gxWF8u5UVlGRBjHVN8FhCogkZFPlTaO%2FdEZ6UQCQtTl7hrPbIggAqYZzPChHA%2BffnXIvXVPMOG4bL256zs40%2FW%2F65kWO0J1aOpGKr1%2BpUUlrZpsQimdspd8l5D05BBE%2FOJVl4twPgnuOT%2FQ4ZLzwBDLmTJ2Sq11bptruwa9A75AOUO85%2F63PiWTsZbgAg%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-675006246127-asia-east1","object":"49c03d90-fc2a-4325-a876-80f56ad04843.zip"}}
+[debug] [2023-04-04T14:33:51.102Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/49c03d90-fc2a-4325-a876-80f56ad04843.zip GoogleAccessId=service-675006246127%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1680620631&Signature=pggmwZJo3ooCPh8aYv%2F%2B7h%2BKkDQ%2FaeEafhqGIR5e3%2BeDDMcu%2F7V13zdpzWIrbsWywqbMcXd9poPw34HsmbfalwhBgmMARa6j%2F7JUYPdycJaBKf8p%2BkPvLsXk3QenNwnMUItS0yjxU3%2BBS8%2BtHgykkb4X3gxWF8u5UVlGRBjHVN8FhCogkZFPlTaO%2FdEZ6UQCQtTl7hrPbIggAqYZzPChHA%2BffnXIvXVPMOG4bL256zs40%2FW%2F65kWO0J1aOpGKr1%2BpUUlrZpsQimdspd8l5D05BBE%2FOJVl4twPgnuOT%2FQ4ZLzwBDLmTJ2Sq11bptruwa9A75AOUO85%2F63PiWTsZbgAg%3D%3D
+[debug] [2023-04-04T14:33:51.102Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/49c03d90-fc2a-4325-a876-80f56ad04843.zip [stream]
+[debug] [2023-04-04T14:34:00.842Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/49c03d90-fc2a-4325-a876-80f56ad04843.zip 200
+[debug] [2023-04-04T14:34:00.843Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/49c03d90-fc2a-4325-a876-80f56ad04843.zip [omitted]
+[info] +  functions: .firebase\lawgp-bb050\functions folder uploaded successfully 
+[info] i  hosting[lawgp-bb050]: beginning deploy... 
+[info] i  hosting[lawgp-bb050]: found 27 files in .firebase\lawgp-bb050\hosting 
+[debug] [2023-04-04T14:34:00.961Z] [hosting] uploading with 200 concurrency
+[debug] [2023-04-04T14:34:00.964Z] [hosting] hash cache [LmZpcmViYXNlXGxhd2dwLWJiMDUwXGhvc3Rpbmc] not populated
+[debug] [2023-04-04T14:34:01.028Z] [hosting] hash cache [LmZpcmViYXNlXGxhd2dwLWJiMDUwXGhvc3Rpbmc] stored for 27 files
+[debug] [2023-04-04T14:34:01.029Z] [hosting][hash queue][FINAL] {"max":47,"min":22,"avg":33.407407407407405,"active":0,"complete":27,"success":27,"errored":0,"retried":0,"total":27,"elapsed":57}
+[debug] [2023-04-04T14:34:01.030Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/675006246127/sites/lawgp-bb050/versions/60698683fb236809:populateFiles [none]
+[debug] [2023-04-04T14:34:01.030Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/675006246127/sites/lawgp-bb050/versions/60698683fb236809:populateFiles {"files":{"/404.html":"ec418768cb97a2e3ed42512f406b2d49aab8569caa75ccb1888c9d3919b25ab6","/index.html":"4c8f7c66020ccff0b0991e5dfd4a468f6018e2ec40023550df20435826fb44e5","/500.html":"f62aa300b70665ec5c67685e582a86feb8be79383292118ad253c87d713b834e","/vercel.svg":"1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888","/next.svg":"dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc","/_next/static/85uyVNtN0SSLobEGDsPua/_ssgManifest.js":"f73bbe5888d285cbab0ee19990a0d9db0b352fa3dfd30959d64a2bc66422d35c","/_next/static/85uyVNtN0SSLobEGDsPua/_buildManifest.js":"e3c425178c8d452e01886f2283ddd4311414b5ef60c634e6f68a2500c39edf66","/thirteen.svg":"399b773f0a515eec351e7559a4d1cd83b32c1c812f2fbc32fe1ba4ba4c1f580c","/usericon.png":"ee81fbfe2c815fe7dce4ff16d258a4d8f8146de7e415e93fd13156542fce7649","/_next/static/chunks/664-8af8765c6fed5950.js":"71a94b2a270cca1afb7c7e7f2a62de4e4ed58d60e7dc143076713525de2bfa22","/_next/static/chunks/d7eeaac4-aceccd8ec99042ac.js":"22f58aa3d297cd0a581d7e2c9a4f66f3836b13f997a155e4bcd41d946af8ca51","/_next/static/chunks/pages/index-44a87fc46259c126.js":"b85b382e9b84e511ae781c694a092ff64c90dd96a9384d7528c296b6219fd158","/favicon.ico":"43127f4210c52bcd0f30f291f1ee296ab41ddd1566905dc27fe1129e0175c8f1","/_next/static/chunks/webpack-c4acd79e87956a0e.js":"79c65c217ca4bea07b76e39b862142b6c00efaedf7262e600048aa92c5bfefe3","/_next/static/chunks/pages/login-04b2a4565f0d3df2.js":"58bbcfe7322c7f9d116d137f807307a13fa41e5e73a66b598bddc46b66d7a71b","/_next/static/chunks/pages/_app-2dfd096757008a0f.js":"c525b7a7d8a360ddd25a0a4c6e05d1b1b610648fcc61b1bdc0f6624e13761801","/_next/static/css/87b16b021b91edc5.css":"57dc2fb19bb53ed76fb9114e1b89168fd78eba1ecfb9aa64241489f512bdbdf0","/_next/static/chunks/pages/_error-54de1933a164a1ff.js":"544d995b1338ae1c6dfc6574c193fc07192e395739e80f5e37499c3749875b8a","/_next/static/css/0939bd10edde4af9.css":"7f2616b6c5dc3b86428bd40b2ce1d7592b22451a532aa34b7cfa83fdc66f367f","/_next/static/chunks/pages/components/header-8afd4cf084f7a1d8.js":"3b5acb5fc92140b38399f162ead5167293dafc1395a73c3bd6f8fb4ef9dbfaf9","/_next/static/css/d4224c6d23fbfe1b.css":"ab32c36b8a659fd5897010c882b7ddf08b19aed360a8d91987c7341c3ff17d5b","/_next/static/chunks/320-4462b4d840398da0.js":"afdeb76f67153424fee069563dde5ae20b9cd4ca3eac0066a2b37b601f9c148e","/_next/static/chunks/main-9a72db714f5fe4c1.js":"8e5b98b2133aff60df1a3901d6fc327fcdcb73a77bd03d6d15d9753198276ccf","/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js":"94291e78be8a4f3b9af21c6dae21c20d76cadc33fe6b28d0ed6554e80060fb5c","/_next/static/chunks/327-00a4dd4059ba83e0.js":"c566ae242e847365a0c5ec044f7f0d6d159e9a02e1fd3549fa53441cd5fa0b0e","/quensulting_symbol.png":"da7b3a520d3aa94b68c764939111c6e257e5603ec053417ec25df407020fb2f2","/_next/static/chunks/framework-2c79e2a64abdb08b.js":"b6c2ebd921694edf45f77a2b778b116c9b6ed72aaf6b111071feb8e1fa4425fd"}}
+[debug] [2023-04-04T14:34:02.278Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/675006246127/sites/lawgp-bb050/versions/60698683fb236809:populateFiles 200
+[debug] [2023-04-04T14:34:02.278Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/675006246127/sites/lawgp-bb050/versions/60698683fb236809:populateFiles {"uploadRequiredHashes":["4c8f7c66020ccff0b0991e5dfd4a468f6018e2ec40023550df20435826fb44e5","f62aa300b70665ec5c67685e582a86feb8be79383292118ad253c87d713b834e","ec418768cb97a2e3ed42512f406b2d49aab8569caa75ccb1888c9d3919b25ab6"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/60698683fb236809/files"}
+[debug] [2023-04-04T14:34:02.280Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/60698683fb236809/files/4c8f7c66020ccff0b0991e5dfd4a468f6018e2ec40023550df20435826fb44e5 [none]
+[debug] [2023-04-04T14:34:02.280Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/60698683fb236809/files/4c8f7c66020ccff0b0991e5dfd4a468f6018e2ec40023550df20435826fb44e5 [stream]
+[debug] [2023-04-04T14:34:02.282Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/60698683fb236809/files/f62aa300b70665ec5c67685e582a86feb8be79383292118ad253c87d713b834e [none]
+[debug] [2023-04-04T14:34:02.282Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/60698683fb236809/files/f62aa300b70665ec5c67685e582a86feb8be79383292118ad253c87d713b834e [stream]
+[debug] [2023-04-04T14:34:02.284Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/60698683fb236809/files/ec418768cb97a2e3ed42512f406b2d49aab8569caa75ccb1888c9d3919b25ab6 [none]
+[debug] [2023-04-04T14:34:02.284Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/60698683fb236809/files/ec418768cb97a2e3ed42512f406b2d49aab8569caa75ccb1888c9d3919b25ab6 [stream]
+[debug] [2023-04-04T14:34:02.287Z] [hosting][populate queue][FINAL] {"max":1257,"min":1257,"avg":1257,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1264}
+[debug] [2023-04-04T14:34:02.287Z] [hosting] uploads queued: 3
+[debug] [2023-04-04T14:34:03.824Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/60698683fb236809/files/f62aa300b70665ec5c67685e582a86feb8be79383292118ad253c87d713b834e 200
+[debug] [2023-04-04T14:34:03.824Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/60698683fb236809/files/f62aa300b70665ec5c67685e582a86feb8be79383292118ad253c87d713b834e [stream]
+[debug] [2023-04-04T14:34:04.482Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/60698683fb236809/files/4c8f7c66020ccff0b0991e5dfd4a468f6018e2ec40023550df20435826fb44e5 200
+[debug] [2023-04-04T14:34:04.483Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/60698683fb236809/files/4c8f7c66020ccff0b0991e5dfd4a468f6018e2ec40023550df20435826fb44e5 [stream]
+[debug] [2023-04-04T14:34:05.577Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/60698683fb236809/files/ec418768cb97a2e3ed42512f406b2d49aab8569caa75ccb1888c9d3919b25ab6 200
+[debug] [2023-04-04T14:34:05.577Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/60698683fb236809/files/ec418768cb97a2e3ed42512f406b2d49aab8569caa75ccb1888c9d3919b25ab6 [stream]
+[debug] [2023-04-04T14:34:05.578Z] [hosting][upload queue][FINAL] {"max":3297,"min":1544,"avg":2348.3333333333335,"active":0,"complete":3,"success":3,"errored":0,"retried":0,"total":3,"elapsed":3299}
+[info] +  hosting[lawgp-bb050]: file upload complete 
+[debug] [2023-04-04T14:34:05.580Z] [hosting] deploy completed after 4727ms
+[info] i  functions: creating Node.js 16 function firebase-frameworks-lawgp-bb050:ssrlawgpbb050(asia-east1)... 
+[debug] [2023-04-04T14:34:05.595Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions functionId=ssrlawgpbb050
+[debug] [2023-04-04T14:34:05.595Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions {"name":"projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050","buildConfig":{"runtime":"nodejs16","entryPoint":"ssrlawgpbb050","source":{"storageSource":{"bucket":"gcf-v2-uploads-675006246127-asia-east1","object":"49c03d90-fc2a-4325-a876-80f56ad04843.zip"}},"environmentVariables":{}},"serviceConfig":{"environmentVariables":{"__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","FIREBASE_CONFIG":"{\"projectId\":\"lawgp-bb050\",\"storageBucket\":\"lawgp-bb050.appspot.com\"}","GCLOUD_PROJECT":"lawgp-bb050","EVENTARC_CLOUD_EVENT_SOURCE":"projects/lawgp-bb050/locations/asia-east1/services/ssrlawgpbb050"},"availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-lawgp-bb050","firebase-functions-hash":"2f6f7b36422f7018118b83821cd3436bf1185ff8"}}
+[debug] [2023-04-04T14:34:08.636Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions 400
+[debug] [2023-04-04T14:34:08.637Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions {"error":{"code":400,"message":"Could not create Cloud Run service ssrlawgpbb050. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: HTTP Error: 400, Could not create Cloud Run service ssrlawgpbb050. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.
+Consider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account. 
+[warn] !  functions: failed to create function projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050 
+[error] Failed to create function projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050
+[debug] [2023-04-04T14:34:08.658Z] Total Function Deployment time: 3058
+[debug] [2023-04-04T14:34:08.659Z] 1 Functions Deployed
+[debug] [2023-04-04T14:34:08.659Z] 1 Functions Errored
+[debug] [2023-04-04T14:34:08.659Z] 0 Function Deployments Aborted
+[debug] [2023-04-04T14:34:08.659Z] Average Function Deployment time: 3055
+[info] 
+[info] Functions deploy had errors with the following functions:
+	firebase-frameworks-lawgp-bb050:ssrlawgpbb050(asia-east1)
+[debug] [2023-04-04T14:34:08.832Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2023-04-04T14:34:08.838Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/lawgp-bb050/locations/asia-east1/repositories/gcf-artifacts/packages/ssrlawgpbb050 [none]
+[debug] [2023-04-04T14:34:08.841Z] >>> [apiv2][query] GET https://asia.gcr.io/v2/lawgp-bb050/gcf/asia-east1/tags/list [none]
+[debug] [2023-04-04T14:34:09.352Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/lawgp-bb050/locations/asia-east1/repositories/gcf-artifacts/packages/ssrlawgpbb050 404
+[debug] [2023-04-04T14:34:09.352Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/lawgp-bb050/locations/asia-east1/repositories/gcf-artifacts/packages/ssrlawgpbb050 {"error":{"code":404,"message":"Package \"projects/lawgp-bb050/locations/asia-east1/repositories/gcf-artifacts/packages/ssrlawgpbb050\" was not found.","status":"NOT_FOUND"}}
+[debug] [2023-04-04T14:34:11.664Z] <<< [apiv2][status] GET https://asia.gcr.io/v2/lawgp-bb050/gcf/asia-east1/tags/list 200
+[debug] [2023-04-04T14:34:11.664Z] <<< [apiv2][body] GET https://asia.gcr.io/v2/lawgp-bb050/gcf/asia-east1/tags/list {"child":[],"manifest":{},"name":"lawgp-bb050/gcf/asia-east1","tags":[]}
+[debug] [2023-04-04T14:34:11.664Z] Could not find image for function projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050
+[debug] [2023-04-04T14:34:11.665Z] Functions deploy failed.
+[debug] [2023-04-04T14:34:11.665Z] {
+  "endpoint": {
+    "id": "ssrlawgpbb050",
+    "project": "lawgp-bb050",
+    "region": "asia-east1",
+    "entryPoint": "ssrlawgpbb050",
+    "platform": "gcfv2",
+    "runtime": "nodejs16",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "environmentVariables": {
+      "__FIREBASE_FRAMEWORKS_ENTRY__": "next.js",
+      "FIREBASE_CONFIG": "{\"projectId\":\"lawgp-bb050\",\"storageBucket\":\"lawgp-bb050.appspot.com\"}",
+      "GCLOUD_PROJECT": "lawgp-bb050",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/lawgp-bb050/locations/asia-east1/services/ssrlawgpbb050"
+    },
+    "codebase": "firebase-frameworks-lawgp-bb050",
+    "cpu": 1,
+    "concurrency": 80,
+    "targetedByOnly": false,
+    "hash": "2f6f7b36422f7018118b83821cd3436bf1185ff8"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not create Cloud Run service ssrlawgpbb050. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 400, Could not create Cloud Run service ssrlawgpbb050. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+      "status": 400
+    },
+    "status": 400
+  }
+}
+[debug] [2023-04-04T14:34:11.818Z] Error: Failed to create function ssrlawgpbb050 in region asia-east1
+    at C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:48:11
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Fabricator.createV2Function (C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:271:32)
+    at async Fabricator.createEndpoint (C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:132:13)
+    at async handle (C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:85:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2023-04-04T14:34:58.944Z] ----------------------------------------------------------------------
+[debug] [2023-04-04T14:34:58.950Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-04-04T14:34:58.952Z] CLI Version:   11.25.2
+[debug] [2023-04-04T14:34:58.953Z] Platform:      win32
+[debug] [2023-04-04T14:34:58.953Z] Node Version:  v16.16.0
+[debug] [2023-04-04T14:34:58.955Z] Time:          Tue Apr 04 2023 20:04:58 GMT+0530 (India Standard Time)
+[debug] [2023-04-04T14:34:58.956Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-04T14:34:59.371Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-04T14:34:59.376Z] > authorizing via signed-in user (babbarabhay1852@gmail.com)
+[debug] [2023-04-04T14:34:59.379Z] [iam] checking project lawgp-bb050 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-04T14:34:59.391Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions [none]
+[debug] [2023-04-04T14:34:59.393Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:34:59.396Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-04T14:34:59.889Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions 200
+[debug] [2023-04-04T14:34:59.890Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-04T14:34:59.895Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 [none]
+[debug] [2023-04-04T14:35:00.339Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 200
+[debug] [2023-04-04T14:35:00.340Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 {"projectId":"lawgp-bb050","projectNumber":"675006246127","displayName":"lawgpt","name":"projects/lawgp-bb050","resources":{"hostingSite":"lawgp-bb050"},"state":"ACTIVE","etag":"1_6a7c8674-b649-459e-8521-1ab1e27c1cb6"}
+[info] 
+[info] === Deploying to 'lawgp-bb050'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2023-04-04T14:35:58.825Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 [none]
+[debug] [2023-04-04T14:35:59.426Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 200
+[debug] [2023-04-04T14:35:59.427Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 {"projectId":"lawgp-bb050","projectNumber":"675006246127","displayName":"lawgpt","name":"projects/lawgp-bb050","resources":{"hostingSite":"lawgp-bb050"},"state":"ACTIVE","etag":"1_6a7c8674-b649-459e-8521-1ab1e27c1cb6"}
+[info] i  functions: preparing codebase firebase-frameworks-lawgp-bb050 for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-04-04T14:35:59.438Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-04-04T14:35:59.438Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:35:59.445Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-04-04T14:35:59.446Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:35:59.450Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com [none]
+[debug] [2023-04-04T14:35:59.451Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:35:59.454Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com [none]
+[debug] [2023-04-04T14:35:59.454Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:36:01.261Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudfunctions.googleapis.com 200
+[debug] [2023-04-04T14:36:01.261Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-04-04T14:36:01.304Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/runtimeconfig.googleapis.com 200
+[debug] [2023-04-04T14:36:01.305Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-04-04T14:36:01.315Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com 200
+[debug] [2023-04-04T14:36:01.315Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-04-04T14:36:01.320Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com 200
+[debug] [2023-04-04T14:36:01.320Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-04-04T14:36:01.322Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050/adminSdkConfig [none]
+[debug] [2023-04-04T14:36:01.862Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050/adminSdkConfig 200
+[debug] [2023-04-04T14:36:01.862Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050/adminSdkConfig {"projectId":"lawgp-bb050","storageBucket":"lawgp-bb050.appspot.com"}
+[debug] [2023-04-04T14:36:01.863Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/lawgp-bb050/configs [none]
+[debug] [2023-04-04T14:36:02.319Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/lawgp-bb050/configs 200
+[debug] [2023-04-04T14:36:02.320Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/lawgp-bb050/configs {}
+[debug] [2023-04-04T14:36:02.325Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-04-04T14:36:05.394Z] > [functions] package.json contents: {
+  "name": "lawgpt",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "export": "next export",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.4",
+    "@next/font": "13.1.1",
+    "cookies-next": "^2.1.1",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "next": "^13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "react-markdown": "^8.0.6",
+    "firebase-frameworks": "^0.6.0",
+    "firebase-functions": "^3.23.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "16"
+  }
+}
+[debug] [2023-04-04T14:36:05.395Z] Building nodejs source
+[debug] [2023-04-04T14:36:05.399Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-04T14:36:05.433Z] Found firebase-functions binary at 'C:\Users\91951\Desktop\web development\quensulting\lawgpt\lawgpt\.firebase\lawgp-bb050\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-04-04T14:36:06.161Z] Serving at port 8573
+
+[debug] [2023-04-04T14:36:06.363Z] Got response from /__/functions.yaml {"endpoints":{"ssrlawgpbb050":{"platform":"gcfv2","region":["asia-east1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrlawgpbb050"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-04T14:36:06.380Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing .firebase\lawgp-bb050\functions directory for uploading... 
+[info] i  functions: packaged C:\Users\91951\Desktop\web development\quensulting\lawgpt\lawgpt\.firebase\lawgp-bb050\functions (52.81 MB) for uploading 
+[debug] [2023-04-04T14:36:14.871Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/lawgp-bb050/locations/-/functions [none]
+[debug] [2023-04-04T14:36:15.570Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/lawgp-bb050/locations/-/functions 200
+[debug] [2023-04-04T14:36:15.570Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/lawgp-bb050/locations/-/functions {}
+[debug] [2023-04-04T14:36:15.571Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-04-04T14:36:17.318Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/-/functions 200
+[debug] [2023-04-04T14:36:17.318Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-04-04T14:36:17.338Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com [none]
+[debug] [2023-04-04T14:36:17.338Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:36:17.342Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com [none]
+[debug] [2023-04-04T14:36:17.342Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:36:17.346Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/pubsub.googleapis.com [none]
+[debug] [2023-04-04T14:36:17.346Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/pubsub.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:36:17.350Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/storage.googleapis.com [none]
+[debug] [2023-04-04T14:36:17.350Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/storage.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:36:17.816Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/pubsub.googleapis.com 200
+[debug] [2023-04-04T14:36:17.816Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-04-04T14:36:19.175Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com 200
+[debug] [2023-04-04T14:36:19.175Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2023-04-04T14:36:19.214Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com 200
+[debug] [2023-04-04T14:36:19.214Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[debug] [2023-04-04T14:36:19.219Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/storage.googleapis.com 200
+[debug] [2023-04-04T14:36:19.220Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-04-04T14:36:19.225Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-04-04T14:36:19.227Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-04-04T14:36:21.183Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-04-04T14:36:21.183Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-675006246127@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"107110362634833857806"}}
+[debug] [2023-04-04T14:36:21.199Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-04-04T14:36:21.199Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-675006246127@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"116380254167249144132"}}
+[debug] [2023-04-04T14:36:21.204Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 [none]
+[debug] [2023-04-04T14:36:21.840Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 200
+[debug] [2023-04-04T14:36:21.840Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 {"projectId":"lawgp-bb050","projectNumber":"675006246127","displayName":"lawgpt","name":"projects/lawgp-bb050","resources":{"hostingSite":"lawgp-bb050"},"state":"ACTIVE","etag":"1_6a7c8674-b649-459e-8521-1ab1e27c1cb6"}
+[debug] [2023-04-04T14:36:21.846Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/lawgp-bb050/versions [none]
+[debug] [2023-04-04T14:36:21.846Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/lawgp-bb050/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-04-04T14:36:23.514Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/lawgp-bb050/versions 200
+[debug] [2023-04-04T14:36:23.514Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/lawgp-bb050/versions {"name":"projects/675006246127/sites/lawgp-bb050/versions/1206ab48cf5b4363","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-04-04T14:36:23.516Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-04-04T14:36:23.517Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions [none]
+[debug] [2023-04-04T14:36:23.517Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:36:23.517Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-04-04T14:36:24.950Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions 200
+[debug] [2023-04-04T14:36:24.950Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-04-04T14:36:24.951Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-04-04T14:36:24.952Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions:generateUploadUrl [none]
+[debug] [2023-04-04T14:36:25.479Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions:generateUploadUrl 200
+[debug] [2023-04-04T14:36:25.480Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/90e278a2-9ec6-47fe-b277-6cbf82d2efd0.zip?GoogleAccessId=service-675006246127@gcf-admin-robot.iam.gserviceaccount.com&Expires=1680620786&Signature=j2Bs%2FEKKM76ZKOZGIzX8JTpNOEEV%2FyxPEmkj692F3nw%2BFzZZyIJ5NmNurS3G58VKNxOhbLvYy8E7hNukX4ahuzxQuDCwqw4gwwslb1yoJ4dZbT%2BRke8vo0IEFO02FJiKKSLChv5KUVkqRiZYkNTPJNugxJMrtOCYpZ2WOBBIZfkP2%2FCahARokOsM25a57sz0cUeqruQ7vt7eQLVSalBltJovQ0wpqr0fc7%2FgtwkSGqW%2FHEshFEmVXdJuBVVtPEHF3tl3znk%2BukeC4IPmFJAaglrcOYqnY7cPl%2BbviqPFPkMnf9N1ByO1sn6KVApSWFNL4VgBloLZPTH9NQN9lKlbSw%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-675006246127-asia-east1","object":"90e278a2-9ec6-47fe-b277-6cbf82d2efd0.zip"}}
+[debug] [2023-04-04T14:36:25.481Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/90e278a2-9ec6-47fe-b277-6cbf82d2efd0.zip GoogleAccessId=service-675006246127%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1680620786&Signature=j2Bs%2FEKKM76ZKOZGIzX8JTpNOEEV%2FyxPEmkj692F3nw%2BFzZZyIJ5NmNurS3G58VKNxOhbLvYy8E7hNukX4ahuzxQuDCwqw4gwwslb1yoJ4dZbT%2BRke8vo0IEFO02FJiKKSLChv5KUVkqRiZYkNTPJNugxJMrtOCYpZ2WOBBIZfkP2%2FCahARokOsM25a57sz0cUeqruQ7vt7eQLVSalBltJovQ0wpqr0fc7%2FgtwkSGqW%2FHEshFEmVXdJuBVVtPEHF3tl3znk%2BukeC4IPmFJAaglrcOYqnY7cPl%2BbviqPFPkMnf9N1ByO1sn6KVApSWFNL4VgBloLZPTH9NQN9lKlbSw%3D%3D
+[debug] [2023-04-04T14:36:25.481Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/90e278a2-9ec6-47fe-b277-6cbf82d2efd0.zip [stream]
+[debug] [2023-04-04T14:36:35.097Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/90e278a2-9ec6-47fe-b277-6cbf82d2efd0.zip 200
+[debug] [2023-04-04T14:36:35.098Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/90e278a2-9ec6-47fe-b277-6cbf82d2efd0.zip [omitted]
+[info] +  functions: .firebase\lawgp-bb050\functions folder uploaded successfully 
+[info] i  hosting[lawgp-bb050]: beginning deploy... 
+[info] i  hosting[lawgp-bb050]: found 27 files in .firebase\lawgp-bb050\hosting 
+[debug] [2023-04-04T14:36:35.160Z] [hosting] uploading with 200 concurrency
+[debug] [2023-04-04T14:36:35.218Z] [hosting] hash cache [LmZpcmViYXNlXGxhd2dwLWJiMDUwXGhvc3Rpbmc] stored for 27 files
+[debug] [2023-04-04T14:36:35.219Z] [hosting][hash queue][FINAL] {"max":34,"min":7,"avg":20.333333333333332,"active":0,"complete":27,"success":27,"errored":0,"retried":0,"total":27,"elapsed":51}
+[debug] [2023-04-04T14:36:35.220Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/675006246127/sites/lawgp-bb050/versions/1206ab48cf5b4363:populateFiles [none]
+[debug] [2023-04-04T14:36:35.220Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/675006246127/sites/lawgp-bb050/versions/1206ab48cf5b4363:populateFiles {"files":{"/favicon.ico":"43127f4210c52bcd0f30f291f1ee296ab41ddd1566905dc27fe1129e0175c8f1","/next.svg":"dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc","/quensulting_symbol.png":"da7b3a520d3aa94b68c764939111c6e257e5603ec053417ec25df407020fb2f2","/thirteen.svg":"399b773f0a515eec351e7559a4d1cd83b32c1c812f2fbc32fe1ba4ba4c1f580c","/usericon.png":"ee81fbfe2c815fe7dce4ff16d258a4d8f8146de7e415e93fd13156542fce7649","/vercel.svg":"1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888","/404.html":"4acab61ab6057da6f860df3dd43a4f3ea1fadbee59ce2fdfb67a366e3a425055","/index.html":"1cc9ce38b006a2686fc252ce273653f3716dc24c3e0394e20a2d24f879b665d4","/500.html":"0ddfc41b4a605daddfb321fd9b288e68be95d47a3020b4ac7986480d711d9936","/_next/static/chunks/664-8af8765c6fed5950.js":"71a94b2a270cca1afb7c7e7f2a62de4e4ed58d60e7dc143076713525de2bfa22","/_next/static/chunks/d7eeaac4-aceccd8ec99042ac.js":"22f58aa3d297cd0a581d7e2c9a4f66f3836b13f997a155e4bcd41d946af8ca51","/_next/static/chunks/webpack-c4acd79e87956a0e.js":"79c65c217ca4bea07b76e39b862142b6c00efaedf7262e600048aa92c5bfefe3","/_next/static/chunks/pages/_app-2dfd096757008a0f.js":"c525b7a7d8a360ddd25a0a4c6e05d1b1b610648fcc61b1bdc0f6624e13761801","/_next/static/chunks/pages/login-04b2a4565f0d3df2.js":"58bbcfe7322c7f9d116d137f807307a13fa41e5e73a66b598bddc46b66d7a71b","/_next/static/chunks/pages/_error-54de1933a164a1ff.js":"544d995b1338ae1c6dfc6574c193fc07192e395739e80f5e37499c3749875b8a","/_next/static/css/87b16b021b91edc5.css":"57dc2fb19bb53ed76fb9114e1b89168fd78eba1ecfb9aa64241489f512bdbdf0","/_next/static/Nv_nSoKepUxqLnzK-H6_q/_buildManifest.js":"e3c425178c8d452e01886f2283ddd4311414b5ef60c634e6f68a2500c39edf66","/_next/static/chunks/pages/index-44a87fc46259c126.js":"b85b382e9b84e511ae781c694a092ff64c90dd96a9384d7528c296b6219fd158","/_next/static/css/d4224c6d23fbfe1b.css":"ab32c36b8a659fd5897010c882b7ddf08b19aed360a8d91987c7341c3ff17d5b","/_next/static/Nv_nSoKepUxqLnzK-H6_q/_ssgManifest.js":"f73bbe5888d285cbab0ee19990a0d9db0b352fa3dfd30959d64a2bc66422d35c","/_next/static/css/0939bd10edde4af9.css":"7f2616b6c5dc3b86428bd40b2ce1d7592b22451a532aa34b7cfa83fdc66f367f","/_next/static/chunks/pages/components/header-8afd4cf084f7a1d8.js":"3b5acb5fc92140b38399f162ead5167293dafc1395a73c3bd6f8fb4ef9dbfaf9","/_next/static/chunks/320-4462b4d840398da0.js":"afdeb76f67153424fee069563dde5ae20b9cd4ca3eac0066a2b37b601f9c148e","/_next/static/chunks/main-9a72db714f5fe4c1.js":"8e5b98b2133aff60df1a3901d6fc327fcdcb73a77bd03d6d15d9753198276ccf","/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js":"94291e78be8a4f3b9af21c6dae21c20d76cadc33fe6b28d0ed6554e80060fb5c","/_next/static/chunks/327-00a4dd4059ba83e0.js":"c566ae242e847365a0c5ec044f7f0d6d159e9a02e1fd3549fa53441cd5fa0b0e","/_next/static/chunks/framework-2c79e2a64abdb08b.js":"b6c2ebd921694edf45f77a2b778b116c9b6ed72aaf6b111071feb8e1fa4425fd"}}
+[debug] [2023-04-04T14:36:36.571Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/675006246127/sites/lawgp-bb050/versions/1206ab48cf5b4363:populateFiles 200
+[debug] [2023-04-04T14:36:36.571Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/675006246127/sites/lawgp-bb050/versions/1206ab48cf5b4363:populateFiles {"uploadRequiredHashes":["4acab61ab6057da6f860df3dd43a4f3ea1fadbee59ce2fdfb67a366e3a425055","0ddfc41b4a605daddfb321fd9b288e68be95d47a3020b4ac7986480d711d9936","1cc9ce38b006a2686fc252ce273653f3716dc24c3e0394e20a2d24f879b665d4"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/1206ab48cf5b4363/files"}
+[debug] [2023-04-04T14:36:36.574Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/1206ab48cf5b4363/files/4acab61ab6057da6f860df3dd43a4f3ea1fadbee59ce2fdfb67a366e3a425055 [none]
+[debug] [2023-04-04T14:36:36.574Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/1206ab48cf5b4363/files/4acab61ab6057da6f860df3dd43a4f3ea1fadbee59ce2fdfb67a366e3a425055 [stream]
+[debug] [2023-04-04T14:36:36.576Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/1206ab48cf5b4363/files/0ddfc41b4a605daddfb321fd9b288e68be95d47a3020b4ac7986480d711d9936 [none]
+[debug] [2023-04-04T14:36:36.576Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/1206ab48cf5b4363/files/0ddfc41b4a605daddfb321fd9b288e68be95d47a3020b4ac7986480d711d9936 [stream]
+[debug] [2023-04-04T14:36:36.580Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/1206ab48cf5b4363/files/1cc9ce38b006a2686fc252ce273653f3716dc24c3e0394e20a2d24f879b665d4 [none]
+[debug] [2023-04-04T14:36:36.580Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/1206ab48cf5b4363/files/1cc9ce38b006a2686fc252ce273653f3716dc24c3e0394e20a2d24f879b665d4 [stream]
+[debug] [2023-04-04T14:36:36.581Z] [hosting][populate queue][FINAL] {"max":1359,"min":1359,"avg":1359,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1367}
+[debug] [2023-04-04T14:36:36.582Z] [hosting] uploads queued: 3
+[debug] [2023-04-04T14:36:38.696Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/1206ab48cf5b4363/files/0ddfc41b4a605daddfb321fd9b288e68be95d47a3020b4ac7986480d711d9936 200
+[debug] [2023-04-04T14:36:38.696Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/1206ab48cf5b4363/files/0ddfc41b4a605daddfb321fd9b288e68be95d47a3020b4ac7986480d711d9936 [stream]
+[debug] [2023-04-04T14:36:39.314Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/1206ab48cf5b4363/files/4acab61ab6057da6f860df3dd43a4f3ea1fadbee59ce2fdfb67a366e3a425055 200
+[debug] [2023-04-04T14:36:39.314Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/1206ab48cf5b4363/files/4acab61ab6057da6f860df3dd43a4f3ea1fadbee59ce2fdfb67a366e3a425055 [stream]
+[debug] [2023-04-04T14:36:39.317Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/1206ab48cf5b4363/files/1cc9ce38b006a2686fc252ce273653f3716dc24c3e0394e20a2d24f879b665d4 200
+[debug] [2023-04-04T14:36:39.317Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/1206ab48cf5b4363/files/1cc9ce38b006a2686fc252ce273653f3716dc24c3e0394e20a2d24f879b665d4 [stream]
+[debug] [2023-04-04T14:36:39.317Z] [hosting][upload queue][FINAL] {"max":2744,"min":2123,"avg":2536.3333333333335,"active":0,"complete":3,"success":3,"errored":0,"retried":0,"total":3,"elapsed":2745}
+[info] +  hosting[lawgp-bb050]: file upload complete 
+[debug] [2023-04-04T14:36:39.318Z] [hosting] deploy completed after 4209ms
+[info] i  functions: creating Node.js 16 function firebase-frameworks-lawgp-bb050:ssrlawgpbb050(asia-east1)... 
+[debug] [2023-04-04T14:36:39.333Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions functionId=ssrlawgpbb050
+[debug] [2023-04-04T14:36:39.333Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions {"name":"projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050","buildConfig":{"runtime":"nodejs16","entryPoint":"ssrlawgpbb050","source":{"storageSource":{"bucket":"gcf-v2-uploads-675006246127-asia-east1","object":"90e278a2-9ec6-47fe-b277-6cbf82d2efd0.zip"}},"environmentVariables":{}},"serviceConfig":{"environmentVariables":{"__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","FIREBASE_CONFIG":"{\"projectId\":\"lawgp-bb050\",\"storageBucket\":\"lawgp-bb050.appspot.com\"}","GCLOUD_PROJECT":"lawgp-bb050","EVENTARC_CLOUD_EVENT_SOURCE":"projects/lawgp-bb050/locations/asia-east1/services/ssrlawgpbb050"},"availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-lawgp-bb050","firebase-functions-hash":"5b64a9d3e6d8748385a8489a62b7500322219b22"}}
+[debug] [2023-04-04T14:36:40.331Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions 400
+[debug] [2023-04-04T14:36:40.331Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions {"error":{"code":400,"message":"Could not create Cloud Run service ssrlawgpbb050. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: HTTP Error: 400, Could not create Cloud Run service ssrlawgpbb050. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.
+Consider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account. 
+[warn] !  functions: failed to create function projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050 
+[error] Failed to create function projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050
+[debug] [2023-04-04T14:36:40.344Z] Total Function Deployment time: 1009
+[debug] [2023-04-04T14:36:40.344Z] 1 Functions Deployed
+[debug] [2023-04-04T14:36:40.344Z] 1 Functions Errored
+[debug] [2023-04-04T14:36:40.344Z] 0 Function Deployments Aborted
+[debug] [2023-04-04T14:36:40.344Z] Average Function Deployment time: 1007
+[info] 
+[info] Functions deploy had errors with the following functions:
+	firebase-frameworks-lawgp-bb050:ssrlawgpbb050(asia-east1)
+[debug] [2023-04-04T14:36:40.500Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2023-04-04T14:36:40.503Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/lawgp-bb050/locations/asia-east1/repositories/gcf-artifacts/packages/ssrlawgpbb050 [none]
+[debug] [2023-04-04T14:36:40.504Z] >>> [apiv2][query] GET https://asia.gcr.io/v2/lawgp-bb050/gcf/asia-east1/tags/list [none]
+[debug] [2023-04-04T14:36:40.939Z] <<< [apiv2][status] GET https://asia.gcr.io/v2/lawgp-bb050/gcf/asia-east1/tags/list 200
+[debug] [2023-04-04T14:36:40.939Z] <<< [apiv2][body] GET https://asia.gcr.io/v2/lawgp-bb050/gcf/asia-east1/tags/list {"child":[],"manifest":{},"name":"lawgp-bb050/gcf/asia-east1","tags":[]}
+[debug] [2023-04-04T14:36:40.940Z] Could not find image for function projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050
+[debug] [2023-04-04T14:36:40.954Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/lawgp-bb050/locations/asia-east1/repositories/gcf-artifacts/packages/ssrlawgpbb050 404
+[debug] [2023-04-04T14:36:40.954Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/lawgp-bb050/locations/asia-east1/repositories/gcf-artifacts/packages/ssrlawgpbb050 {"error":{"code":404,"message":"Package \"projects/lawgp-bb050/locations/asia-east1/repositories/gcf-artifacts/packages/ssrlawgpbb050\" was not found.","status":"NOT_FOUND"}}
+[debug] [2023-04-04T14:36:40.954Z] Functions deploy failed.
+[debug] [2023-04-04T14:36:40.955Z] {
+  "endpoint": {
+    "id": "ssrlawgpbb050",
+    "project": "lawgp-bb050",
+    "region": "asia-east1",
+    "entryPoint": "ssrlawgpbb050",
+    "platform": "gcfv2",
+    "runtime": "nodejs16",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "environmentVariables": {
+      "__FIREBASE_FRAMEWORKS_ENTRY__": "next.js",
+      "FIREBASE_CONFIG": "{\"projectId\":\"lawgp-bb050\",\"storageBucket\":\"lawgp-bb050.appspot.com\"}",
+      "GCLOUD_PROJECT": "lawgp-bb050",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/lawgp-bb050/locations/asia-east1/services/ssrlawgpbb050"
+    },
+    "codebase": "firebase-frameworks-lawgp-bb050",
+    "cpu": 1,
+    "concurrency": 80,
+    "targetedByOnly": false,
+    "hash": "5b64a9d3e6d8748385a8489a62b7500322219b22"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not create Cloud Run service ssrlawgpbb050. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 400, Could not create Cloud Run service ssrlawgpbb050. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+      "status": 400
+    },
+    "status": 400
+  }
+}
+[debug] [2023-04-04T14:36:41.100Z] Error: Failed to create function ssrlawgpbb050 in region asia-east1
+    at C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:48:11
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Fabricator.createV2Function (C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:271:32)
+    at async Fabricator.createEndpoint (C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:132:13)
+    at async handle (C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:85:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2023-04-04T14:37:02.075Z] ----------------------------------------------------------------------
+[debug] [2023-04-04T14:37:02.078Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-04-04T14:37:02.079Z] CLI Version:   11.25.2
+[debug] [2023-04-04T14:37:02.079Z] Platform:      win32
+[debug] [2023-04-04T14:37:02.079Z] Node Version:  v16.16.0
+[debug] [2023-04-04T14:37:02.080Z] Time:          Tue Apr 04 2023 20:07:02 GMT+0530 (India Standard Time)
+[debug] [2023-04-04T14:37:02.081Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-04T14:37:02.180Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-04T14:37:02.181Z] > authorizing via signed-in user (babbarabhay1852@gmail.com)
+[debug] [2023-04-04T14:37:02.181Z] [iam] checking project lawgp-bb050 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-04T14:37:02.184Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions [none]
+[debug] [2023-04-04T14:37:02.184Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:37:02.185Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-04T14:37:03.729Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions 200
+[debug] [2023-04-04T14:37:03.729Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-04T14:37:03.731Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 [none]
+[debug] [2023-04-04T14:37:04.160Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 200
+[debug] [2023-04-04T14:37:04.161Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 {"projectId":"lawgp-bb050","projectNumber":"675006246127","displayName":"lawgpt","name":"projects/lawgp-bb050","resources":{"hostingSite":"lawgp-bb050"},"state":"ACTIVE","etag":"1_6a7c8674-b649-459e-8521-1ab1e27c1cb6"}
+[info] 
+[info] === Deploying to 'lawgp-bb050'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2023-04-04T14:38:03.480Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 [none]
+[debug] [2023-04-04T14:38:03.908Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 200
+[debug] [2023-04-04T14:38:03.908Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 {"projectId":"lawgp-bb050","projectNumber":"675006246127","displayName":"lawgpt","name":"projects/lawgp-bb050","resources":{"hostingSite":"lawgp-bb050"},"state":"ACTIVE","etag":"1_6a7c8674-b649-459e-8521-1ab1e27c1cb6"}
+[info] i  functions: preparing codebase firebase-frameworks-lawgp-bb050 for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-04-04T14:38:03.913Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-04-04T14:38:03.913Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:38:03.915Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-04-04T14:38:03.915Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:38:03.916Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com [none]
+[debug] [2023-04-04T14:38:03.916Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:38:03.917Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com [none]
+[debug] [2023-04-04T14:38:03.917Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:38:05.799Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com 200
+[debug] [2023-04-04T14:38:05.800Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-04-04T14:38:05.803Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudfunctions.googleapis.com 200
+[debug] [2023-04-04T14:38:05.803Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-04-04T14:38:05.806Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/runtimeconfig.googleapis.com 200
+[debug] [2023-04-04T14:38:05.807Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-04-04T14:38:05.847Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com 200
+[debug] [2023-04-04T14:38:05.848Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-04-04T14:38:05.849Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050/adminSdkConfig [none]
+[debug] [2023-04-04T14:38:06.312Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050/adminSdkConfig 200
+[debug] [2023-04-04T14:38:06.312Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050/adminSdkConfig {"projectId":"lawgp-bb050","storageBucket":"lawgp-bb050.appspot.com"}
+[debug] [2023-04-04T14:38:06.314Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/lawgp-bb050/configs [none]
+[debug] [2023-04-04T14:38:06.733Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/lawgp-bb050/configs 200
+[debug] [2023-04-04T14:38:06.733Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/lawgp-bb050/configs {}
+[debug] [2023-04-04T14:38:06.740Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2023-04-04T14:38:08.494Z] > [functions] package.json contents: {
+  "name": "lawgpt",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.4",
+    "@next/font": "13.1.1",
+    "cookies-next": "^2.1.1",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "next": "^13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "react-markdown": "^8.0.6",
+    "firebase-frameworks": "^0.6.0",
+    "firebase-functions": "^3.23.0",
+    "firebase-admin": "^11.0.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "16"
+  }
+}
+[debug] [2023-04-04T14:38:08.495Z] Building nodejs source
+[debug] [2023-04-04T14:38:08.497Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-04-04T14:38:08.518Z] Found firebase-functions binary at 'C:\Users\91951\Desktop\web development\quensulting\lawgpt\lawgpt\.firebase\lawgp-bb050\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-04-04T14:38:08.978Z] Serving at port 8112
+
+[debug] [2023-04-04T14:38:09.078Z] Got response from /__/functions.yaml {"endpoints":{"ssrlawgpbb050":{"platform":"gcfv2","region":["asia-east1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrlawgpbb050"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-04-04T14:38:09.090Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing .firebase\lawgp-bb050\functions directory for uploading... 
+[info] i  functions: packaged C:\Users\91951\Desktop\web development\quensulting\lawgpt\lawgpt\.firebase\lawgp-bb050\functions (52.8 MB) for uploading 
+[debug] [2023-04-04T14:38:13.270Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/lawgp-bb050/locations/-/functions [none]
+[debug] [2023-04-04T14:38:13.899Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/lawgp-bb050/locations/-/functions 200
+[debug] [2023-04-04T14:38:13.900Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/lawgp-bb050/locations/-/functions {}
+[debug] [2023-04-04T14:38:13.901Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-04-04T14:38:15.649Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/-/functions 200
+[debug] [2023-04-04T14:38:15.649Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-04-04T14:38:15.659Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com [none]
+[debug] [2023-04-04T14:38:15.659Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:38:15.661Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com [none]
+[debug] [2023-04-04T14:38:15.661Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:38:15.662Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/pubsub.googleapis.com [none]
+[debug] [2023-04-04T14:38:15.662Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/pubsub.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:38:15.664Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/storage.googleapis.com [none]
+[debug] [2023-04-04T14:38:15.664Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/storage.googleapis.com x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:38:17.476Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com 200
+[debug] [2023-04-04T14:38:17.476Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[debug] [2023-04-04T14:38:17.481Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/pubsub.googleapis.com 200
+[debug] [2023-04-04T14:38:17.481Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-04-04T14:38:17.484Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/storage.googleapis.com 200
+[debug] [2023-04-04T14:38:17.484Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2023-04-04T14:38:17.506Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com 200
+[debug] [2023-04-04T14:38:17.506Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/lawgp-bb050/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-04-04T14:38:17.508Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-04-04T14:38:17.510Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-04-04T14:38:19.462Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-04-04T14:38:19.462Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-675006246127@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"107110362634833857806"}}
+[debug] [2023-04-04T14:38:19.489Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-04-04T14:38:19.489Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/675006246127/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-675006246127@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"116380254167249144132"}}
+[debug] [2023-04-04T14:38:19.495Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 [none]
+[debug] [2023-04-04T14:38:20.138Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 200
+[debug] [2023-04-04T14:38:20.138Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/lawgp-bb050 {"projectId":"lawgp-bb050","projectNumber":"675006246127","displayName":"lawgpt","name":"projects/lawgp-bb050","resources":{"hostingSite":"lawgp-bb050"},"state":"ACTIVE","etag":"1_6a7c8674-b649-459e-8521-1ab1e27c1cb6"}
+[debug] [2023-04-04T14:38:20.141Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/lawgp-bb050/versions [none]
+[debug] [2023-04-04T14:38:20.141Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/lawgp-bb050/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-04-04T14:38:21.737Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/lawgp-bb050/versions 200
+[debug] [2023-04-04T14:38:21.737Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/lawgp-bb050/versions {"name":"projects/675006246127/sites/lawgp-bb050/versions/928f06f4cf4aef48","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase","firebase-web-framework":"next_ssr"}}
+[debug] [2023-04-04T14:38:21.738Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-04-04T14:38:21.738Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions [none]
+[debug] [2023-04-04T14:38:21.738Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions x-goog-quota-user=projects/lawgp-bb050
+[debug] [2023-04-04T14:38:21.738Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-04-04T14:38:23.186Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions 200
+[debug] [2023-04-04T14:38:23.186Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/lawgp-bb050:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-04-04T14:38:23.186Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-04-04T14:38:23.189Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions:generateUploadUrl [none]
+[debug] [2023-04-04T14:38:23.729Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions:generateUploadUrl 200
+[debug] [2023-04-04T14:38:23.729Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/7397ad05-7281-4f49-aee2-2f41977d6813.zip?GoogleAccessId=service-675006246127@gcf-admin-robot.iam.gserviceaccount.com&Expires=1680620904&Signature=k5ob%2BSlFRM9XJuvbyFPhuabRMA%2FYOPuRTqeF6DQQqHxEFy9Eiam86QaKO7Cl6yR6VSGadNVJgLvLNQqzMGcw%2F%2F9GLKi0BnRyYakb0ptDnbxWsd%2FUyAG3k5z8RC3v23o20YOjcD1OvWTYuf1RmBxaSJliWQp0Bz%2FsqxO8YwQ5vH3bVTarBRdYWd%2BVEjkNSlz0UrblMetsYBlqMNCTeUxq%2FXGuBcUZzbtA0iTLLgTU08692QzoXM3Sx3thh8yEtxEzydyTCid7XPpQQw1zfXMJCGxEcTEahb5023laIHbWYwJJZ7myiA86la0bf6TgsHOxHCQwi7SSlGAKOnyf5zO%2B4g%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-675006246127-asia-east1","object":"7397ad05-7281-4f49-aee2-2f41977d6813.zip"}}
+[debug] [2023-04-04T14:38:23.730Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/7397ad05-7281-4f49-aee2-2f41977d6813.zip GoogleAccessId=service-675006246127%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1680620904&Signature=k5ob%2BSlFRM9XJuvbyFPhuabRMA%2FYOPuRTqeF6DQQqHxEFy9Eiam86QaKO7Cl6yR6VSGadNVJgLvLNQqzMGcw%2F%2F9GLKi0BnRyYakb0ptDnbxWsd%2FUyAG3k5z8RC3v23o20YOjcD1OvWTYuf1RmBxaSJliWQp0Bz%2FsqxO8YwQ5vH3bVTarBRdYWd%2BVEjkNSlz0UrblMetsYBlqMNCTeUxq%2FXGuBcUZzbtA0iTLLgTU08692QzoXM3Sx3thh8yEtxEzydyTCid7XPpQQw1zfXMJCGxEcTEahb5023laIHbWYwJJZ7myiA86la0bf6TgsHOxHCQwi7SSlGAKOnyf5zO%2B4g%3D%3D
+[debug] [2023-04-04T14:38:23.730Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/7397ad05-7281-4f49-aee2-2f41977d6813.zip [stream]
+[debug] [2023-04-04T14:38:35.775Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/7397ad05-7281-4f49-aee2-2f41977d6813.zip 200
+[debug] [2023-04-04T14:38:35.775Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-675006246127-asia-east1/7397ad05-7281-4f49-aee2-2f41977d6813.zip [omitted]
+[info] +  functions: .firebase\lawgp-bb050\functions folder uploaded successfully 
+[info] i  hosting[lawgp-bb050]: beginning deploy... 
+[info] i  hosting[lawgp-bb050]: found 27 files in .firebase\lawgp-bb050\hosting 
+[debug] [2023-04-04T14:38:35.843Z] [hosting] uploading with 200 concurrency
+[debug] [2023-04-04T14:38:35.907Z] [hosting] hash cache [LmZpcmViYXNlXGxhd2dwLWJiMDUwXGhvc3Rpbmc] stored for 27 files
+[debug] [2023-04-04T14:38:35.908Z] [hosting][hash queue][FINAL] {"max":44,"min":13,"avg":22.999999999999993,"active":0,"complete":27,"success":27,"errored":0,"retried":0,"total":27,"elapsed":59}
+[debug] [2023-04-04T14:38:35.909Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/675006246127/sites/lawgp-bb050/versions/928f06f4cf4aef48:populateFiles [none]
+[debug] [2023-04-04T14:38:35.909Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/675006246127/sites/lawgp-bb050/versions/928f06f4cf4aef48:populateFiles {"files":{"/favicon.ico":"43127f4210c52bcd0f30f291f1ee296ab41ddd1566905dc27fe1129e0175c8f1","/next.svg":"dd6837ad10912a1f5820eb31ad506e500d83be91a8635fcfa59b04d06f671fdc","/quensulting_symbol.png":"da7b3a520d3aa94b68c764939111c6e257e5603ec053417ec25df407020fb2f2","/thirteen.svg":"399b773f0a515eec351e7559a4d1cd83b32c1c812f2fbc32fe1ba4ba4c1f580c","/usericon.png":"ee81fbfe2c815fe7dce4ff16d258a4d8f8146de7e415e93fd13156542fce7649","/vercel.svg":"1c03fbc03ff9ecf3469972d378778b1aea296f8ab9cb540af9d42c7848f52888","/404.html":"908d48247c05ec8bf64ad70db9b4549a06c4ed6df62cb85cf4f0d0d7e8ab0e2d","/500.html":"78605c22ebf193e2c3de15d2156dda210c055fdd0c1b54f9ae0f47ce0af6bbc3","/index.html":"3094ad083176d6f1eef1b3bb28460399c6aca2437458f4d4ed251eab357115e2","/_next/static/chunks/664-8af8765c6fed5950.js":"71a94b2a270cca1afb7c7e7f2a62de4e4ed58d60e7dc143076713525de2bfa22","/_next/static/chunks/d7eeaac4-aceccd8ec99042ac.js":"22f58aa3d297cd0a581d7e2c9a4f66f3836b13f997a155e4bcd41d946af8ca51","/_next/static/chunks/webpack-c4acd79e87956a0e.js":"79c65c217ca4bea07b76e39b862142b6c00efaedf7262e600048aa92c5bfefe3","/_next/static/chunks/pages/login-04b2a4565f0d3df2.js":"58bbcfe7322c7f9d116d137f807307a13fa41e5e73a66b598bddc46b66d7a71b","/_next/static/chunks/pages/index-44a87fc46259c126.js":"b85b382e9b84e511ae781c694a092ff64c90dd96a9384d7528c296b6219fd158","/_next/static/chunks/pages/_error-54de1933a164a1ff.js":"544d995b1338ae1c6dfc6574c193fc07192e395739e80f5e37499c3749875b8a","/_next/static/css/87b16b021b91edc5.css":"57dc2fb19bb53ed76fb9114e1b89168fd78eba1ecfb9aa64241489f512bdbdf0","/_next/static/chunks/pages/_app-2dfd096757008a0f.js":"c525b7a7d8a360ddd25a0a4c6e05d1b1b610648fcc61b1bdc0f6624e13761801","/_next/static/chunks/pages/components/header-8afd4cf084f7a1d8.js":"3b5acb5fc92140b38399f162ead5167293dafc1395a73c3bd6f8fb4ef9dbfaf9","/_next/static/lw3Eln7s_XdZcDCuN1QzW/_ssgManifest.js":"f73bbe5888d285cbab0ee19990a0d9db0b352fa3dfd30959d64a2bc66422d35c","/_next/static/css/0939bd10edde4af9.css":"7f2616b6c5dc3b86428bd40b2ce1d7592b22451a532aa34b7cfa83fdc66f367f","/_next/static/css/d4224c6d23fbfe1b.css":"ab32c36b8a659fd5897010c882b7ddf08b19aed360a8d91987c7341c3ff17d5b","/_next/static/lw3Eln7s_XdZcDCuN1QzW/_buildManifest.js":"e3c425178c8d452e01886f2283ddd4311414b5ef60c634e6f68a2500c39edf66","/_next/static/chunks/320-4462b4d840398da0.js":"afdeb76f67153424fee069563dde5ae20b9cd4ca3eac0066a2b37b601f9c148e","/_next/static/chunks/main-9a72db714f5fe4c1.js":"8e5b98b2133aff60df1a3901d6fc327fcdcb73a77bd03d6d15d9753198276ccf","/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js":"94291e78be8a4f3b9af21c6dae21c20d76cadc33fe6b28d0ed6554e80060fb5c","/_next/static/chunks/327-00a4dd4059ba83e0.js":"c566ae242e847365a0c5ec044f7f0d6d159e9a02e1fd3549fa53441cd5fa0b0e","/_next/static/chunks/framework-2c79e2a64abdb08b.js":"b6c2ebd921694edf45f77a2b778b116c9b6ed72aaf6b111071feb8e1fa4425fd"}}
+[debug] [2023-04-04T14:38:37.145Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/675006246127/sites/lawgp-bb050/versions/928f06f4cf4aef48:populateFiles 200
+[debug] [2023-04-04T14:38:37.145Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/675006246127/sites/lawgp-bb050/versions/928f06f4cf4aef48:populateFiles {"uploadRequiredHashes":["3094ad083176d6f1eef1b3bb28460399c6aca2437458f4d4ed251eab357115e2","78605c22ebf193e2c3de15d2156dda210c055fdd0c1b54f9ae0f47ce0af6bbc3","908d48247c05ec8bf64ad70db9b4549a06c4ed6df62cb85cf4f0d0d7e8ab0e2d"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/928f06f4cf4aef48/files"}
+[debug] [2023-04-04T14:38:37.146Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/928f06f4cf4aef48/files/3094ad083176d6f1eef1b3bb28460399c6aca2437458f4d4ed251eab357115e2 [none]
+[debug] [2023-04-04T14:38:37.146Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/928f06f4cf4aef48/files/3094ad083176d6f1eef1b3bb28460399c6aca2437458f4d4ed251eab357115e2 [stream]
+[debug] [2023-04-04T14:38:37.148Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/928f06f4cf4aef48/files/78605c22ebf193e2c3de15d2156dda210c055fdd0c1b54f9ae0f47ce0af6bbc3 [none]
+[debug] [2023-04-04T14:38:37.148Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/928f06f4cf4aef48/files/78605c22ebf193e2c3de15d2156dda210c055fdd0c1b54f9ae0f47ce0af6bbc3 [stream]
+[debug] [2023-04-04T14:38:37.149Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/928f06f4cf4aef48/files/908d48247c05ec8bf64ad70db9b4549a06c4ed6df62cb85cf4f0d0d7e8ab0e2d [none]
+[debug] [2023-04-04T14:38:37.149Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/928f06f4cf4aef48/files/908d48247c05ec8bf64ad70db9b4549a06c4ed6df62cb85cf4f0d0d7e8ab0e2d [stream]
+[debug] [2023-04-04T14:38:37.150Z] [hosting][populate queue][FINAL] {"max":1244,"min":1244,"avg":1244,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1248}
+[debug] [2023-04-04T14:38:37.150Z] [hosting] uploads queued: 3
+[debug] [2023-04-04T14:38:38.545Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/928f06f4cf4aef48/files/908d48247c05ec8bf64ad70db9b4549a06c4ed6df62cb85cf4f0d0d7e8ab0e2d 200
+[debug] [2023-04-04T14:38:38.546Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/928f06f4cf4aef48/files/908d48247c05ec8bf64ad70db9b4549a06c4ed6df62cb85cf4f0d0d7e8ab0e2d [stream]
+[debug] [2023-04-04T14:38:39.841Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/928f06f4cf4aef48/files/3094ad083176d6f1eef1b3bb28460399c6aca2437458f4d4ed251eab357115e2 200
+[debug] [2023-04-04T14:38:39.842Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/928f06f4cf4aef48/files/3094ad083176d6f1eef1b3bb28460399c6aca2437458f4d4ed251eab357115e2 [stream]
+[debug] [2023-04-04T14:38:40.495Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/928f06f4cf4aef48/files/78605c22ebf193e2c3de15d2156dda210c055fdd0c1b54f9ae0f47ce0af6bbc3 200
+[debug] [2023-04-04T14:38:40.495Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/lawgp-bb050/versions/928f06f4cf4aef48/files/78605c22ebf193e2c3de15d2156dda210c055fdd0c1b54f9ae0f47ce0af6bbc3 [stream]
+[debug] [2023-04-04T14:38:40.495Z] [hosting][upload queue][FINAL] {"max":3349,"min":1400,"avg":2482,"active":0,"complete":3,"success":3,"errored":0,"retried":0,"total":3,"elapsed":3350}
+[info] +  hosting[lawgp-bb050]: file upload complete 
+[debug] [2023-04-04T14:38:40.497Z] [hosting] deploy completed after 4716ms
+[info] i  functions: creating Node.js 16 function firebase-frameworks-lawgp-bb050:ssrlawgpbb050(asia-east1)... 
+[debug] [2023-04-04T14:38:40.515Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions functionId=ssrlawgpbb050
+[debug] [2023-04-04T14:38:40.515Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions {"name":"projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050","buildConfig":{"runtime":"nodejs16","entryPoint":"ssrlawgpbb050","source":{"storageSource":{"bucket":"gcf-v2-uploads-675006246127-asia-east1","object":"7397ad05-7281-4f49-aee2-2f41977d6813.zip"}},"environmentVariables":{}},"serviceConfig":{"environmentVariables":{"__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","FIREBASE_CONFIG":"{\"projectId\":\"lawgp-bb050\",\"storageBucket\":\"lawgp-bb050.appspot.com\"}","GCLOUD_PROJECT":"lawgp-bb050","EVENTARC_CLOUD_EVENT_SOURCE":"projects/lawgp-bb050/locations/asia-east1/services/ssrlawgpbb050"},"availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-codebase":"firebase-frameworks-lawgp-bb050","firebase-functions-hash":"806d321e7d0f7816338ede4913cc3515c6cb5eae"}}
+[debug] [2023-04-04T14:38:41.545Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions 400
+[debug] [2023-04-04T14:38:41.545Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/lawgp-bb050/locations/asia-east1/functions {"error":{"code":400,"message":"Could not create Cloud Run service ssrlawgpbb050. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: HTTP Error: 400, Could not create Cloud Run service ssrlawgpbb050. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.
+Consider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account. 
+[warn] !  functions: failed to create function projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050 
+[error] Failed to create function projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050
+[debug] [2023-04-04T14:38:41.563Z] Total Function Deployment time: 1046
+[debug] [2023-04-04T14:38:41.563Z] 1 Functions Deployed
+[debug] [2023-04-04T14:38:41.563Z] 1 Functions Errored
+[debug] [2023-04-04T14:38:41.563Z] 0 Function Deployments Aborted
+[debug] [2023-04-04T14:38:41.563Z] Average Function Deployment time: 1043
+[info] 
+[info] Functions deploy had errors with the following functions:
+	firebase-frameworks-lawgp-bb050:ssrlawgpbb050(asia-east1)
+[debug] [2023-04-04T14:38:41.720Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2023-04-04T14:38:41.723Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/lawgp-bb050/locations/asia-east1/repositories/gcf-artifacts/packages/ssrlawgpbb050 [none]
+[debug] [2023-04-04T14:38:41.724Z] >>> [apiv2][query] GET https://asia.gcr.io/v2/lawgp-bb050/gcf/asia-east1/tags/list [none]
+[debug] [2023-04-04T14:38:42.179Z] <<< [apiv2][status] GET https://asia.gcr.io/v2/lawgp-bb050/gcf/asia-east1/tags/list 200
+[debug] [2023-04-04T14:38:42.179Z] <<< [apiv2][body] GET https://asia.gcr.io/v2/lawgp-bb050/gcf/asia-east1/tags/list {"child":[],"manifest":{},"name":"lawgp-bb050/gcf/asia-east1","tags":[]}
+[debug] [2023-04-04T14:38:42.180Z] Could not find image for function projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050
+[debug] [2023-04-04T14:38:42.191Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/lawgp-bb050/locations/asia-east1/repositories/gcf-artifacts/packages/ssrlawgpbb050 404
+[debug] [2023-04-04T14:38:42.191Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/lawgp-bb050/locations/asia-east1/repositories/gcf-artifacts/packages/ssrlawgpbb050 {"error":{"code":404,"message":"Package \"projects/lawgp-bb050/locations/asia-east1/repositories/gcf-artifacts/packages/ssrlawgpbb050\" was not found.","status":"NOT_FOUND"}}
+[debug] [2023-04-04T14:38:42.191Z] Functions deploy failed.
+[debug] [2023-04-04T14:38:42.192Z] {
+  "endpoint": {
+    "id": "ssrlawgpbb050",
+    "project": "lawgp-bb050",
+    "region": "asia-east1",
+    "entryPoint": "ssrlawgpbb050",
+    "platform": "gcfv2",
+    "runtime": "nodejs16",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "environmentVariables": {
+      "__FIREBASE_FRAMEWORKS_ENTRY__": "next.js",
+      "FIREBASE_CONFIG": "{\"projectId\":\"lawgp-bb050\",\"storageBucket\":\"lawgp-bb050.appspot.com\"}",
+      "GCLOUD_PROJECT": "lawgp-bb050",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/lawgp-bb050/locations/asia-east1/services/ssrlawgpbb050"
+    },
+    "codebase": "firebase-frameworks-lawgp-bb050",
+    "cpu": 1,
+    "concurrency": 80,
+    "targetedByOnly": false,
+    "hash": "806d321e7d0f7816338ede4913cc3515c6cb5eae"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/lawgp-bb050/locations/asia-east1/functions/ssrlawgpbb050",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not create Cloud Run service ssrlawgpbb050. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 400, Could not create Cloud Run service ssrlawgpbb050. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+      "status": 400
+    },
+    "status": 400
+  }
+}
+[debug] [2023-04-04T14:38:42.352Z] Error: Failed to create function ssrlawgpbb050 in region asia-east1
+    at C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:48:11
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Fabricator.createV2Function (C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:271:32)
+    at async Fabricator.createEndpoint (C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:132:13)
+    at async handle (C:\Users\91951\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:85:17)
+[error] 
+[error] Error: There was an error deploying functions

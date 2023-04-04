@@ -7,13 +7,19 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Header from "./components/header";
 import { getCookie } from "cookies-next";
 import { backend_url } from "./api/_healper";
+import {
+  AiOutlineLike,
+  AiOutlineDislike,
+  AiFillLike,
+  AiFillDislike,
+} from "react-icons/ai";
 
 export default function Home() {
   const [userInput, setUserInput] = useState("");
   const [loading, setLoading] = useState(false);
   const token = getCookie("token");
   const [messages, setMessages] = useState([
-    { role: "assistant", content: "Hi there! How can I help?" },
+    { role: "start", content: "Hi there! How can I help?" },
   ]);
 
   const messageListRef = useRef(null);
@@ -35,12 +41,57 @@ export default function Home() {
     setMessages((prevMessages) => [
       ...prevMessages,
       {
-        role: "assistant",
+        role: "error",
         content: "Oops! There seems to be an error. Please try again.",
       },
     ]);
     setLoading(false);
     setUserInput("");
+  };
+
+  const handleLike = async (id) => {
+    let headersList = {
+      Accept: "*/*",
+      Authorization: `Token ${token}`,
+      "Content-Type": "application/json",
+    };
+    const response = await fetch(`${backend_url}/chat/like/${id}/`, {
+      method: "POST",
+      headers: headersList,
+    });
+
+    const data = await response.json();
+
+    setMessages(
+      messages.map((message) => {
+        if (message.id === id) {
+          message.is_helpful = data.data;
+        }
+        return message;
+      })
+    );
+  };
+
+  const handleDislike = async (id) => {
+    let headersList = {
+      Accept: "*/*",
+      Authorization: `Token ${token}`,
+      "Content-Type": "application/json",
+    };
+    const response = await fetch(`${backend_url}/chat/dislike/${id}/`, {
+      method: "POST",
+      headers: headersList,
+    });
+
+    const data = await response.json();
+    setMessages(
+      messages.map((message) => {
+        if (message.id === id) {
+          message.is_helpful = data.data;
+        }
+        return message;
+      })
+    );
   };
 
   // Handle form submission
@@ -83,7 +134,12 @@ export default function Home() {
 
     setMessages((prevMessages) => [
       ...prevMessages,
-      { role: "assistant", content: data.data },
+      {
+        role: "assistant",
+        content: data.data,
+        id: data.id,
+        is_helpful: data.is_helpful,
+      },
     ]);
     setLoading(false);
   };
@@ -122,37 +178,71 @@ export default function Home() {
                     loading &&
                     index === messages.length - 1
                       ? styles.usermessagewaiting
-                      : message.role === "assistant"
+                      : message.role === "assistant" || message.role === "error"
                       ? styles.apimessage
                       : styles.usermessage
                   }
                 >
-                  {/* Display the correct icon depending on the message type */}
-                  {message.role === "assistant" ? (
-                    <Image
-                      src="/openai.png"
-                      alt="AI"
-                      width="30"
-                      height="30"
-                      className={styles.boticon}
-                      priority={true}
-                    />
-                  ) : (
-                    <Image
-                      src="/usericon.png"
-                      alt="Me"
-                      width="30"
-                      height="30"
-                      className={styles.usericon}
-                      priority={true}
-                    />
-                  )}
-                  <div className={styles.markdownanswer}>
-                    {/* Messages are being rendered in Markdown format */}
-                    <ReactMarkdown linkTarget={"_blank"}>
-                      {message.content}
-                    </ReactMarkdown>
+                  <div className={styles.flex}>
+                    {/* Display the correct icon depending on the message type */}
+                    {message.role === "assistant" ||
+                    message.role === "error" ||
+                    message.role === "start" ? (
+                      <Image
+                        src="/quensulting_symbol.png"
+                        alt="AI"
+                        width="30"
+                        height="30"
+                        className={styles.boticon}
+                        priority={true}
+                      />
+                    ) : (
+                      <Image
+                        src="/usericon.png"
+                        alt="Me"
+                        width="30"
+                        height="30"
+                        className={styles.usericon}
+                        priority={true}
+                      />
+                    )}
+                    <div className={styles.markdownanswer}>
+                      {/* Messages are being rendered in Markdown format */}
+                      <ReactMarkdown linkTarget={"_blank"}>
+                        {message.content}
+                      </ReactMarkdown>
+                    </div>
                   </div>
+
+                  {message.role === "assistant" ? (
+                    <div className={styles.rate_message}>
+                      Was this Helpful
+                      {message.is_helpful === true ? (
+                        <AiFillLike
+                          className={styles.like_dislike}
+                          onClick={() => handleLike(message.id)}
+                        />
+                      ) : (
+                        <AiOutlineLike
+                          className={styles.like_dislike}
+                          onClick={() => handleLike(message.id)}
+                        />
+                      )}
+                      {message.is_helpful === false ? (
+                        <AiFillDislike
+                          className={styles.like_dislike}
+                          onClick={() => handleDislike(message.id)}
+                        />
+                      ) : (
+                        <AiOutlineDislike
+                          className={styles.like_dislike}
+                          onClick={() => handleDislike(message.id)}
+                        />
+                      )}
+                    </div>
+                  ) : (
+                    <></>
+                  )}
                 </div>
               );
             })}

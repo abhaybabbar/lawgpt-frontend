@@ -148,6 +148,22 @@
   animation-name: loading-gradient;
 }
 
+.rate_message {
+  border: 1px solid #30373d;
+  width: 40%;
+  margin: 0.5rem auto 0;
+  padding: 0.3rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.like_dislike {
+  cursor: pointer;
+}
+
 @keyframes loading-gradient {
   0% {
     background-position: -100% 0;
@@ -173,9 +189,13 @@
   }
 }
 
-.apimessage,
+/* .apimessage,
 .usermessage,
 .usermessagewaiting {
+  display: flex;
+} */
+
+.flex {
   display: flex;
 }
 
